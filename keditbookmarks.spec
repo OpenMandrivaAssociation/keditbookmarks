@@ -29,7 +29,7 @@ KDE bookmarks editor.
 %{_datadir}/config.kcfg/keditbookmarks.kcfg
 %{_datadir}/kxmlgui5/keditbookmarks
 %{_docdir}/HTML/*/keditbookmarks
-%{_mandir}/*/man1/*
+%{_mandir}/man1/*
 
 #----------------------------------------------------------------------------
 
