@@ -27,8 +27,9 @@ KDE bookmarks editor.
 %{_bindir}/kbookmarkmerger
 %{_bindir}/keditbookmarks
 %{_datadir}/config.kcfg/keditbookmarks.kcfg
-%{_docdir}/HTML/en/keditbookmarks/
-%{_mandir}/man1/kbookmarkmerger.1*
+%{_datadir}/kxmlgui5/keditbookmarks
+%{_docdir}/HTML/*/keditbookmarks
+%{_mandir}/*/man1/*
 
 #----------------------------------------------------------------------------
 
