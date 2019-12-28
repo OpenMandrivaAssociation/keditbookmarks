@@ -2,13 +2,13 @@
 
 Summary:	KDE bookmarks editor
 Name:		keditbookmarks
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Epoch:		1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5I18n)
@@ -65,3 +65,6 @@ Shared library for %{name}.
 rm -rf %{buildroot}%{_libdir}/libkbookmarkmodel_private.so
 
 %find_lang %{name}
+
+# FIXME workaround for gdb 8.3.1 hang
+strip --strip-unneeded %{buildroot}%{_bindir}/*
