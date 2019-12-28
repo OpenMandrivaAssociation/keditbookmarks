@@ -65,6 +65,3 @@ Shared library for %{name}.
 rm -rf %{buildroot}%{_libdir}/libkbookmarkmodel_private.so
 
 %find_lang %{name}
-
-# FIXME workaround for gdb 8.3.1 hang
-strip --strip-unneeded %{buildroot}%{_bindir}/*
