@@ -2,7 +2,7 @@
 
 Summary:	KDE bookmarks editor
 Name:		keditbookmarks
-Version:	20.03.80
+Version:	20.03.90
 Release:	1
 Epoch:		1
 License:	LGPLv2+
