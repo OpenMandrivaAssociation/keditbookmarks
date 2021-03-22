@@ -2,7 +2,7 @@
 
 Summary:	KDE bookmarks editor
 Name:		keditbookmarks
-Version:	20.12.3
+Version:	21.03.80
 Release:	1
 Epoch:		1
 License:	LGPLv2+
@@ -30,7 +30,6 @@ KDE bookmarks editor.
 %{_bindir}/kbookmarkmerger
 %{_bindir}/keditbookmarks
 %{_datadir}/config.kcfg/keditbookmarks.kcfg
-%{_datadir}/kxmlgui5/keditbookmarks
 %{_docdir}/HTML/*/keditbookmarks
 %{_mandir}/man1/*
 %{_mandir}/*/man1/*
