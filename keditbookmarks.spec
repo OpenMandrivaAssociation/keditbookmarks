@@ -2,7 +2,7 @@
 
 Summary:	KDE bookmarks editor
 Name:		keditbookmarks
-Version:	21.07.90
+Version:	21.08.0
 Release:	1
 Epoch:		1
 License:	LGPLv2+
