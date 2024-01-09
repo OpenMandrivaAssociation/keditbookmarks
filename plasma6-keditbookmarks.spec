@@ -24,8 +24,8 @@ BuildRequires:	pkgconfig(Qt6Test)
 %description
 KDE bookmarks editor.
 
-%files -f %{name}.lang
-%{_kde6_applicationsdir}/org.kde.keditbookmarks.desktop
+%files -f keditbookmarks.lang
+%{_datadir}/applications/org.kde.keditbookmarks.desktop
 %{_datadir}/qlogging-categories6/keditbookmarks.categories
 %{_bindir}/kbookmarkmerger
 %{_bindir}/keditbookmarks
@@ -48,12 +48,12 @@ Shared library for %{name}.
 
 %files -n %{libkbookmarkmodel_private}
 %{_libdir}/libkbookmarkmodel_private.so.%{kbookmarkmodel_private_major}*
-%{_libdir}/libkbookmarkmodel_private.so.6.97.0
+%{_libdir}/libkbookmarkmodel_private.so.5.97.0
 
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n keditbookmarks-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -66,4 +66,4 @@ Shared library for %{name}.
 
 rm -rf %{buildroot}%{_libdir}/libkbookmarkmodel_private.so
 
-%find_lang %{name}
+%find_lang keditbookmarks
