@@ -5,7 +5,7 @@
 
 Summary:	KDE bookmarks editor
 Name:		plasma6-keditbookmarks
-Version:	24.08.1
+Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
