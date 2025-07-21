@@ -5,7 +5,7 @@
 
 Summary:	KDE bookmarks editor
 Name:		keditbookmarks
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -27,18 +27,21 @@ BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6Test)
 
+%rename plasma6-keditbookmarks
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 KDE bookmarks editor.
 
-%files -f keditbookmarks.lang
+%files -f %{name}.lang
 %{_datadir}/applications/org.kde.keditbookmarks.desktop
 %{_datadir}/qlogging-categories6/keditbookmarks.categories
 %{_bindir}/kbookmarkmerger
 %{_bindir}/keditbookmarks
 %{_datadir}/config.kcfg/keditbookmarks.kcfg
-%{_docdir}/HTML/*/keditbookmarks
 %{_mandir}/man1/*
-%{_mandir}/*/man1/*
 
 #----------------------------------------------------------------------------
 
@@ -55,21 +58,3 @@ Shared library for %{name}.
 %files -n %{libkbookmarkmodel_private}
 %{_libdir}/libkbookmarkmodel_private.so.%{kbookmarkmodel_private_major}*
 %{_libdir}/libkbookmarkmodel_private.so.5.97.0
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n keditbookmarks-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-
-rm -rf %{buildroot}%{_libdir}/libkbookmarkmodel_private.so
-
-%find_lang keditbookmarks
