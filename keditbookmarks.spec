@@ -5,7 +5,7 @@
 
 Summary:	KDE bookmarks editor
 Name:		keditbookmarks
-Version:	26.08.1
+Version:	26.08.2
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
